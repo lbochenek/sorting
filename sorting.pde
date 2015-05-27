@@ -6,6 +6,7 @@ public void setup()
 {
   w = 415;
   h = 332;
+  //source: http://www.destination360.com/north-america/us/wyoming/rocky-mountains
   img = loadImage("mountain.jpg");
   size(w, h);
   enter = false;
@@ -28,38 +29,52 @@ void keyPressed()
   }
   else if(key == 'q') //insertion
   {
+    print("insertion!\n");
     enter = false;
     redraw();
+    insertionSort();
   }
   else if(key == 'w') //selection
   {
+    print("selection!\n");
     enter = false;
     redraw();
+    selectionSort();
   }
   else if(key == 'e') //bubble
   {
+    print("bubble!\n");
     enter = false;
     redraw();
+    bubbleSort();
   }
   else if(key == 'r') //shell
   {
+    print("shell!\n");
     enter = false;
     redraw();
+    shellSort();
   }
   else if(key == 't') //merge
   {
+    print("merge!\n");
     enter = false;
     redraw();
+    mergeSort();
   }
   else if(key == 'y') //heap
   {
+    print("heap!\n");
     enter = false;
     redraw();
+    heapSort();
   }
   else if(key == 'u') //quick
   {
+    print("quick!\n");
     enter = false;
     redraw();
+    quickSort();
   }
 }
 
@@ -67,7 +82,7 @@ void mess()
 {
   loadPixels();
   int len = pixels.length;
-  for(int i=0; i<len; i++)
+  for(int i=0; i<(len/2); i++)
   {
     if(i>0)
       loadPixels();
@@ -109,5 +124,6 @@ void heapSort()
 
 void quickSort()
 {
+  
 }
 
